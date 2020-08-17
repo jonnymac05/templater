@@ -1,0 +1,166 @@
+yar.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+nav button {
+  background: none !important;
+  color: inherit;
+  border: none;
+  font: inherit;
+  /*border is optional*/
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+
+button.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  /* margin: 0;
+  padding: 0; */
+  text-decoration: none;
+}
+
+.link-button:hover,
+.link-button:focus {
+  text-decoration: none;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-form {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 25%;
+  margin-right: auto;
+  display: inline-table;
+}
+
+.friends {
+  margin-top: 80px;
+  display: block;
+}
+
+.friendcard,
+.jobcard {
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.delete {
+  background-color: tomato;
+}
+
+.button-left {
+  float: left;
+  margin-bottom: 30px;
+}
+
+.button-right {
+  float: right;
+
+  margin-bottom: 30px;
+}
+
+.job-modal {
+  float: left;
+  margin-left: 50px;
+}
+
+.userImg {
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userName {
+  text-align: center;
+}
+
+.side-bar {
+  background-color: rgb(244, 252, 255);
+  float: left;
+  margin-top: 55px;
+}
+
+.main-nav-title {
+  text-align: center;
+}
+
+.side-nav-btn {
+  margin-left: 35%;
+}
+
+.logout {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.search-form {
+  margin-top: 80px;
+  margin-left: 25%;
+}
+
+.skills {
+  display: inline-block;
+  margin-right: 5px;
+  color: purple;
+}
+
+.skills-text {
+  display: inline-block;
+  margin-right: 10px;
+  color: purple;
+}
+
+.modal-class {
+  margin-top: 100px;
+}
+
+.form-button {
+  margin-top: 30px;
+}
+
+.checkbox-area {
+  margin-top: 15px;
+  font-size: large;
+}

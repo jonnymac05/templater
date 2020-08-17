@@ -1,0 +1,38 @@
+.box {
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 20px;
+    background-color: rgb(238, 238, 238);
+    border-color: rgb(3, 0, 27);
+    border-radius: 3%;
+    border-width: thin;
+
+}
+
+.code-section {
+    margin-top: 20px;
+}
+
+.col {
+    width: 48%;
+}
+
+.input-area {
+    float: right;
+}
+
+.separator-div {
+    width: 100px;
+}
+
+.label-left {
+    margin-left: 30px;
+}
+
+.label-right {
+    margin-left: 50px;
+}
+
+.attribute-button {
+    margin-left: 10px;
+}
