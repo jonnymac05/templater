@@ -105,6 +105,7 @@ class Templater extends Component {
       />
     );
   };
+
   mapDomainText = (domainText) => {
     return <DomainText key={domainText.id} domainText={domainText} />;
   };
@@ -1529,7 +1530,7 @@ class Templater extends Component {
                 <br />
                 {"public int Id { get; set; }"}
                 <br />
-                {"public string status { get; set; }"}
+                {"public string Status { get; set; }"}
                 <br />
                 {this.state.domainTextArray}
                 {"public DateTime DateCreated { get; set; }"}
@@ -1572,7 +1573,7 @@ class Templater extends Component {
                 <br />
                 {"{"}
                 <br />
-                {"public string status { get; set; }"}
+                {"public string Status { get; set; }"}
                 <br />
                 {this.state.domainTextArray}
                 {"}"}
@@ -1649,7 +1650,7 @@ class Templater extends Component {
                 <br />
                 {'string procName = "[dbo].['}
                 {this.state.formData.widgetName}
-                {'s_Add]";'}
+                {'_Add]";'}
                 <br />
                 {""}
                 <br />
@@ -1661,7 +1662,7 @@ class Templater extends Component {
                 <br />
                 {""}
                 <br />
-                {'col.AddWithValue("@status", model.status);'}
+                {'col.AddWithValue("@status", model.Status);'}
                 <br />
                 {this.state.colAddArray}
                 <br />
@@ -1699,7 +1700,7 @@ class Templater extends Component {
                 <br />
                 {'string procName = "[dbo].['}
                 {this.state.formData.widgetName}
-                {'s_Update]";'}
+                {'_Update]";'}
                 <br />
                 {
                   "_data.ExecuteNonQuery(procName, inputParamMapper: delegate (SqlParameterCollection col)"
@@ -1711,7 +1712,7 @@ class Templater extends Component {
                 <br />
                 {'col.AddWithValue("@Id", model.Id);'}
                 <br />
-                {'col.AddWithValue("@status", model.status);'}
+                {'col.AddWithValue("@status", model.Status);'}
                 <br />
                 {this.state.colAddArray}
                 {""}
@@ -1750,7 +1751,7 @@ class Templater extends Component {
                 <br />
                 {"[dbo].["}
                 {this.state.formData.widgetName}
-                {"s_GetAllPaginated],"}
+                {"_GetAllPaginated],"}
                 <br />
                 {
                   "inputParamMapper: delegate (SqlParameterCollection parameterCollection)"
@@ -1862,7 +1863,7 @@ class Templater extends Component {
                 <br />
                 {'"[dbo].['}
                 {this.state.formData.widgetName}
-                {'s_SearchPaginated]",'}
+                {'_SearchPaginated]",'}
                 <br />
                 {
                   "inputParamMapper: delegate (SqlParameterCollection parameterCollection)"
@@ -1874,7 +1875,7 @@ class Templater extends Component {
                 <br />
                 {'parameterCollection.AddWithValue("@pageSize", pageSize);'}
                 <br />
-                {'parameterCollection.AddWithValue("@Q", query);'}
+                {'parameterCollection.AddWithValue("@query", query);'}
                 <br />
                 {"},"}
                 <br />
@@ -1896,7 +1897,7 @@ class Templater extends Component {
                 {".Id = reader.GetSafeInt32(index++);"}
                 <br />
                 {this.state.formData.widgetName.toLowerCase()}
-                {".status = reader.GetSafeString(index++);"}
+                {".Status = reader.GetSafeString(index++);"}
                 <br />
                 {this.state.readerArray}
                 {"if (totalCount == 0)"}
@@ -1965,7 +1966,7 @@ class Templater extends Component {
                 <br />
                 {'string procName = "[dbo].['}
                 {this.state.formData.widgetName}
-                {'s_GetById]";'}
+                {'_GetById]";'}
                 <br />
                 {
                   "_data.ExecuteCmd(procName, inputParamMapper: delegate (SqlParameterCollection paramsCollection)"
@@ -1994,7 +1995,7 @@ class Templater extends Component {
                 {".Id = reader.GetSafeInt32(index++);"}
                 <br />
                 {this.state.formData.widgetName.toLowerCase()}
-                {".status = reader.GetSafeString(index++);"}
+                {".Status = reader.GetSafeString(index++);"}
                 <br />
                 {this.state.readerArray}
                 {this.state.formData.widgetName.toLowerCase()}
@@ -2023,7 +2024,7 @@ class Templater extends Component {
                 <br />
                 {'string procName = "[dbo].['}
                 {this.state.formData.widgetName}
-                {'s_Delete]";'}
+                {'_Delete]";'}
                 <br />
                 {
                   "_data.ExecuteNonQuery(procName, inputParamMapper: delegate (SqlParameterCollection col)"
@@ -2122,19 +2123,19 @@ class Templater extends Component {
                 <br />
                 {""}
                 <br />
-                {"namespace Sabio.Web.Api.Controllers.Temp"}
+                {"namespace Sabio.Web.Api.Controllers"}
                 <br />
                 {"{"}
                 <br />
                 {'[Route("api/'}
                 {this.state.formData.widgetName.toLowerCase()}
-                {'s")]'}
+                {'")]'}
                 <br />
                 {"[ApiController]"}
                 <br />
                 {"public class "}
                 {this.state.formData.widgetName}
-                {"sApiController : BaseApiController"}
+                {"ApiController : BaseApiController"}
                 <br />
                 {"{"}
                 <br />
@@ -2146,13 +2147,13 @@ class Templater extends Component {
                 <br />
                 {"public "}
                 {this.state.formData.widgetName}
-                {"sApiController(I"}
+                {"ApiController(I"}
                 {this.state.formData.widgetName}
                 {"Service service"}
                 <br />
                 {", ILogger<"}
                 {this.state.formData.widgetName}
-                {"sApiController> logger"}
+                {"ApiController> logger"}
                 <br />
                 {", IAuthenticationService<int> authService) : base(logger)"}
                 <br />
