@@ -7,7 +7,7 @@ Builds out all code necessary for a component based on it's inputs: a form in re
 2. Enter names and character limits for attributes for that component. 
 3. Copy code from the left to build elements for the front, middle and backend as needed. 
 
-## Improvements:
+## Improvements To Be Made:
 - Number inputs
 - Checkbox inputs
 - Radio Button inputs
